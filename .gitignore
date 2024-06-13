@@ -1,0 +1,81 @@
+# Android Studio 관련
+.idea/
+.gradle/
+local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+/.idea/gradle.xml
+/.idea/sonarlint/
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# 빌드 디렉토리
+/build/
+*/build/
+
+# 로그 파일
+/logs
+*.log
+
+# 영구적으로 로컬에만 있어야 하는 파일들
+local.properties
+.DS_Store
+.mvn/
+!.mvn/wrapper/maven-wrapper.jar
+**/gradle-wrapper.jar
+**/gradle-wrapper.properties
+
+# 사용자별 파일
+*.swp
+*.swo
+*.swn
+*.orig
+*.pyc
+*~.nib
+*.pidb
+*.seed
+*.class
+*.idea
+*.sublime-*
+*.xml.bak
+*.rej
+*.keystore
+*.hprof
+*.pdf
+*.pdf.bak
+*.back
+*.backup
+*.tmp
+*.temp
+*.log
+
+# 임시 파일들
+*.tmp
+*.bak
+*.swp
+*~.nib
+._*
+
+# Android lint 결과
+lint/cli
+
+# Android Studio 3 in .idea directory (See http://b.android.com/319769)
+.idea/codeStyles/Project.xml
+.idea/dictionaries
+.idea/libraries
+.idea/tasks.xml
+.idea/usage.statistics.xml
+.idea/.name
+
+# IntelliJ
+out/
+
+# 필수
+/app/app.iml
+/gradle/

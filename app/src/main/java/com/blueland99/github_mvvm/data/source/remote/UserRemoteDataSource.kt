@@ -1,7 +1,7 @@
 package com.blueland99.github_mvvm.data.source.remote
 
-import com.blueland99.github_mvvm.data.model.UserEntity
 import com.blueland99.github_mvvm.data.model.UserListEntity
+import retrofit2.Response
 import javax.inject.Inject
 
 class UserRemoteDataSource @Inject constructor(private val apiService: GitHubApiService) {
@@ -9,7 +9,7 @@ class UserRemoteDataSource @Inject constructor(private val apiService: GitHubApi
         query: String,
         page: Int?,
         limit: Int?,
-    ): UserListEntity {
+    ): Response<UserListEntity> {
         return apiService.getUsers(query, page, limit)
     }
 }

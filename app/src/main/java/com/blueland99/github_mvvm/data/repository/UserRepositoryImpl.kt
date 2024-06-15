@@ -1,11 +1,10 @@
 package com.blueland99.github_mvvm.data.repository
 
-import com.blueland99.github_mvvm.data.model.UserEntity
-import com.blueland99.github_mvvm.data.model.UserListEntity
 import com.blueland99.github_mvvm.data.source.remote.UserRemoteDataSource
-import com.blueland99.github_mvvm.domain.model.User
 import com.blueland99.github_mvvm.domain.model.UserList
 import com.blueland99.github_mvvm.domain.repository.UserRepository
+import com.blueland99.github_mvvm.mapper.toDomainModel
+import retrofit2.Response
 
 class UserRepositoryImpl(
     private val remoteDataSource: UserRemoteDataSource
@@ -14,20 +13,12 @@ class UserRepositoryImpl(
         query: String,
         page: Int?,
         limit: Int?,
-    ): UserList {
-        return remoteDataSource.getUsers(query, page, limit).toDomainModel()
-    }
-
-    private fun UserListEntity.toDomainModel(): UserList {
-        return UserList(
-            items = items.map { it.toDomainModel() }
-        )
-    }
-
-    private fun UserEntity.toDomainModel(): User {
-        return User(
-            id = id,
-            login = login,
-        )
+    ): Response<UserList> {
+        val response = remoteDataSource.getUsers(query, page, limit)
+        return if (response.isSuccessful) {
+            Response.success(response.body()?.toDomainModel())
+        } else {
+            Response.error(response.code(), response.errorBody()!!)
+        }
     }
 }

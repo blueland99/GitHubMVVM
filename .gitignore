@@ -1,81 +1,48 @@
-# Android Studio 관련
-.idea/
+# Gradle 관련 파일
 .gradle/
+build/
+
+# 프로젝트 관련 파일
+.idea/
+*.iml
+*.hprof
+*.log
+
+# 사용자별 설정 파일
 local.properties
+.DS_Store
+*.swp
+
+# Android 관련 파일
+/captures/
+/output/
+*.apk
+*.ap_
+
+# Android Studio specific
 /.idea/caches
 /.idea/libraries
 /.idea/modules.xml
 /.idea/workspace.xml
 /.idea/navEditor.xml
 /.idea/assetWizardSettings.xml
-/.idea/gradle.xml
-/.idea/sonarlint/
-.idea/
+/.idea/misc.xml
+*.iws
 *.iml
 *.ipr
-*.iws
 
-# 빌드 디렉토리
-/build/
-*/build/
+# Keystore files
+*.jks
 
-# 로그 파일
-/logs
-*.log
-
-# 영구적으로 로컬에만 있어야 하는 파일들
+# NDK
+/.cxx/
 local.properties
-.DS_Store
-.mvn/
-!.mvn/wrapper/maven-wrapper.jar
-**/gradle-wrapper.jar
-**/gradle-wrapper.properties
 
-# 사용자별 파일
-*.swp
-*.swo
-*.swn
-*.orig
-*.pyc
-*~.nib
-*.pidb
-*.seed
-*.class
-*.idea
-*.sublime-*
-*.xml.bak
-*.rej
-*.keystore
-*.hprof
-*.pdf
-*.pdf.bak
-*.back
-*.backup
-*.tmp
-*.temp
-*.log
+# Google Services (e.g. Firebase)
+/google-services.json
+# Firebase Crashlytics mapping file
+/crashlytics-build.properties
 
-# 임시 파일들
-*.tmp
-*.bak
-*.swp
-*~.nib
-._*
-
-# Android lint 결과
-lint/cli
-
-# Android Studio 3 in .idea directory (See http://b.android.com/319769)
-.idea/codeStyles/Project.xml
-.idea/dictionaries
-.idea/libraries
-.idea/tasks.xml
-.idea/usage.statistics.xml
-.idea/.name
-
-# IntelliJ
+# IntelliJ IDEA
 out/
-
-# 필수
-/app/app.iml
-/gradle/
+No newline at end of file
